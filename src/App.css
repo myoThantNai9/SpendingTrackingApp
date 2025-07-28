@@ -1,42 +1,117 @@
-#root {
-  max-width: 1280px;
+/* Base Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+ 
+/* Container */
+.container {
+  max-width: 960px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+ 
+/* Header */
+header {
+  background-color: #f0fdf4;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #d1fae5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+ 
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #065f46;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+ 
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ 
+.nav-links a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #10b981;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #065f46;
+  background-color: white;
+  transition: all 0.2s ease;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+ 
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: #10b981;
+  color: white;
 }
-
+ 
+/* Cards */
 .card {
-  padding: 2em;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
 }
-
-.read-the-docs {
-  color: #888;
+ 
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #374151;
 }
+ 
+/* Buttons */
+.button {
+  background-color: #10b981;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+ 
+.button:hover {
+  background-color: #059669;
+}
+ 
+/* Inputs */
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+ 
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+ 
+/* Grid Layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+ 
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+ 

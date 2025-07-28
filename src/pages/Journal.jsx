@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
+import './Journal.css';
+ 
 const predefinedCategories = [
   'Food', 'Transport', 'Utilities', 'Entertainment', 'Health', 'Shopping', 'Other'
 ];
-
+ 
 export default function Journal() {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [date, setDate] = useState('');
@@ -17,15 +18,15 @@ export default function Journal() {
     const stored = localStorage.getItem('spendingCategories');
     return stored ? JSON.parse(stored) : [...predefinedCategories];
   });
-
+ 
   useEffect(() => {
     localStorage.setItem('spendingRecords', JSON.stringify(records));
   }, [records]);
-
+ 
   useEffect(() => {
     localStorage.setItem('spendingCategories', JSON.stringify(categories));
   }, [categories]);
-
+ 
   const handleAdd = () => {
     if (!date || !(selectedCategory || newCategory) || !amount) return;
     const category = newCategory || selectedCategory;
@@ -36,35 +37,43 @@ export default function Journal() {
     setNewCategory('');
     setAmount('');
   };
-
+ 
   const renderRecords = () => {
     if (records.length === 0) {
-      return <div className="p-6 rounded-lg bg-green-50 text-gray-700">No spending records yet.</div>;
+      return <div className="no-records">No spending records yet.</div>;
     }
     return (
-      <ul className="space-y-2">
+      <div className="records-list">
         {records.map((rec, index) => (
-          <li key={index} className="bg-white p-4 rounded shadow">
+          <div key={index} className="record-card">
             {rec.date} - {rec.category} - ฿{rec.amount.toFixed(2)}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   };
-
+ 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="journal-container">
       <div>
-        <h2 className="text-2xl font-bold mb-6">Add Spending Record</h2>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="mb-4">
-            <label className="block font-semibold mb-1">Date:</label>
-            <input type="date" value={date} onChange={e => setDate(e.target.value)} className="w-full border rounded p-2" />
+        <h2>Add Spending Record</h2>
+        <div className="form-card">
+          <div>
+            <label>Date:</label>
+            <input
+              type="date"
+              value={date}
+              onChange={e => setDate(e.target.value)}
+            />
           </div>
-          <div className="mb-4 flex items-center gap-2">
-            <div className="flex-1">
-              <label className="block font-semibold mb-1">Category:</label>
-              <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="w-full border rounded p-2">
+ 
+          <div className="category-row">
+            <div style={{ flex: 1 }}>
+              <label>Category:</label>
+              <select
+                value={selectedCategory}
+                onChange={e => setSelectedCategory(e.target.value)}
+              >
                 <option value="">Select a category</option>
                 {categories.map((cat, i) => (
                   <option key={i} value={cat}>{cat}</option>
@@ -76,14 +85,14 @@ export default function Journal() {
               placeholder="New category"
               value={newCategory}
               onChange={e => setNewCategory(e.target.value)}
-              className="border rounded p-2"
             />
             <button
-              className="bg-green-400 text-white px-3 py-2 rounded"
+              className="button-primary"
               onClick={() => {
-                if (newCategory && !categories.includes(newCategory)) {
-                  setCategories([...categories, newCategory]);
-                  setSelectedCategory(newCategory);
+                if (newCategory.trim() && !categories.includes(newCategory.trim())) {
+                  const trimmed = newCategory.trim();
+                  setCategories([...categories, trimmed]);
+                  setSelectedCategory(trimmed);
                   setNewCategory('');
                 }
               }}
@@ -91,17 +100,27 @@ export default function Journal() {
               + Add Category
             </button>
           </div>
-          <div className="mb-4">
-            <label className="block font-semibold mb-1">Amount:</label>
-            <input type="number" value={amount} onChange={e => setAmount(e.target.value)} className="w-full border rounded p-2" />
+ 
+          <div>
+            <label>Amount:</label>
+            <input
+              type="number"
+              value={amount}
+              onChange={e => setAmount(e.target.value)}
+            />
           </div>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded" onClick={handleAdd}>Add Record</button>
+ 
+          <button className="button-primary" onClick={handleAdd}>
+            Add Record
+          </button>
         </div>
       </div>
+ 
       <div>
-        <h2 className="text-2xl font-bold mb-6">Spending Records</h2>
+        <h2>Spending Records</h2>
         {renderRecords()}
       </div>
     </div>
   );
 }
+ 
