@@ -1,12 +1,31 @@
-# React + Vite
+# Spending Tracker
+A clean and colorful React web app to help you track your daily spending with categories, charts, and a user-friendly design.
+##  Team Members
+- Chaw Yadanar Oo
+- Myo Thant Naing
+##  Project Description
+This app lets users:
+- Add spending records with category, amount, and description
+- View all spending in a neat list
+- Delete items
+- See a pie chart of spending by category
+- View total amount in Thai Baht (฿)
+Built with React functional components and hooks.
+## Tech Stack
+ 
+- React.js
+- Chart.js
+- Custom CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Screenshots
+### ExpenseJournal
+![ExpenseJournal Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/Chaw-yadaner-oo/ExpenseJournal.png)
+ 
+### Dashboard
+![Dashboard Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/Chaw-yadaner-oo/Dashboard.png)
+ 
+### ChartTest
+![ChartTest Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/Chaw-yadaner-oo/ChartTest.png)
+ 
+### CategoryTest
+![CategoryTest Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/Chaw-yadaner-oo/CategoryTest.png)
