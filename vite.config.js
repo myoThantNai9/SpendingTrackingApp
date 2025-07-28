@@ -4,8 +4,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/SpendingTrackingApp/', // ✅ match your GitHub repo name
-  build: {
-    outDir: 'docs', // ✅ Output to /docs instead of /dist
-  },
+  base: '/', // ✅ match your GitHub repo name
+  
 })
