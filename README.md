@@ -25,13 +25,13 @@ Built with React functional components and hooks.
  
 ##  Screenshots
 ### ExpenseJournal
-![Category Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/ExpenseJournal.png)
+![ExpenseJournal Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/ExpenseJournal.png)
 
 ### Dashboard
 ![Dashboard Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/Dashboard.png)
 
 ### ChartTest
-![Chart Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/ChartTest.png)
+![ChartTest Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/ChartTest.png)
 
 ### CategoryTest
 ![CategoryTest Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/CategoryTest.png)
