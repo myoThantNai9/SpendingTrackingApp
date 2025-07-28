@@ -26,7 +26,7 @@ Built with React functional components and hooks.
 ##  Screenshots
 
 ### 1. Category Spending Breakdown
-![Category Spending Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/CategoryTest.png)
+![Category Breakdown](https://raw.githubusercontent.com/myoThantNai9/SpendingTrackingApp/main/CategoryTest.png)
 *This pie chart visualizes how your spending is distributed across different categories.*
  
 ### 1. Analytics Dashboard (Initial State)
