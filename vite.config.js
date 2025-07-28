@@ -4,9 +4,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/SpendingTrackingApp/', // ✅ match your GitHub repo name
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-  },
+  base: '/SpendingTrackingApp/', // Set the base path for GitHub Pages
 })

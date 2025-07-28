@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/myoThantNai9/SpendingTrackingApp",
+  "homepage": "https://myothantnai9.github.io/SpendingTrackingApp/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
